@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { RootState } from '../toolkitStore';
-import { decrement, increment, incrementBy } from '../toolkitStore/counterSlice';
+import { RootState } from '../../toolkitStore';
+import { decrement, increment, incrementBy } from '../../toolkitStore/counterSlice';
 
-const CounterWithToolkit: React.FC = () => {
+const Counter: React.FC = () => {
   const count = useSelector((state: RootState) => state.counter.num);
   const dispatch = useDispatch();
   const [input, setInput] = useState<number>(0);
@@ -55,4 +55,4 @@ const CounterWithToolkit: React.FC = () => {
   );
 };
 
-export default CounterWithToolkit;
+export default Counter;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { RootState } from '../reduxStore';
-import { increment, decrement, incrementBy } from '../reduxStore/counter';
+import { RootState } from '../../reduxStore';
+import { increment, decrement, incrementBy } from '../../reduxStore/counter';
 
 const Counter: React.FC = () => {
   const count = useSelector((state: RootState) => state.counter.num);

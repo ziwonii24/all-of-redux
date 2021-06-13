@@ -2,14 +2,16 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { RootState } from '../../reduxStore';
-import { getAppleProductThunk } from '../../reduxStore/shop';
+// import { getAppleProductThunk } from '../../reduxStore/shop';// FIXME: redux-thunk
+import { getAppleProductAsync } from '../../reduxStore/shop';
 
 const Shop: React.FC = () => {
   const { loading, error, data } = useSelector((state: RootState) => state.shop.product);
   const dispatch = useDispatch();
 
   const handleClickLoad = () => {
-    dispatch(getAppleProductThunk());
+    // dispatch(getAppleProductThunk());// FIXME: redux-thunk
+    dispatch(getAppleProductAsync.request());
   };
 
   console.log(loading, error, data);

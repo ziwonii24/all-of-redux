@@ -9,4 +9,5 @@ export const getAppleProductAsync = createAsyncAction(
   GET_PRODUCT_LIST,
   GET_PRODUCT_LIST_SUCCESS,
   GET_PRODUCT_LIST_ERROR,
-)<undefined, TProduct[], TApiError>();
+)<undefined, TProduct[], TApiError>(); // FIXME: redux-thunk
+// )<string, TProduct[], TApiError>(); // redux-saga ?

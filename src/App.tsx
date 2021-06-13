@@ -3,9 +3,10 @@ import { Link, Route, BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import Thunk from 'redux-thunk';
-import createSagaMiddleware from 'redux-saga';
+// import createSagaMiddleware from 'redux-saga';
 
-import rootReducer, { rootSaga } from './reduxStore';
+// import rootReducer, { rootSaga } from './reduxStore';
+import rootReducer from './reduxStore';
 import toolkitStore from './toolkitStore';
 
 import Home from './component/Home';
@@ -15,10 +16,10 @@ import Shop from './component/without_toolkit/Shop';
 
 import CounterWithToolkit from './component/with_toolkit/Counter';
 
-const sagaMiddleware = createSagaMiddleware();
-// const reduxStore = createStore(rootReducer, applyMiddleware(Thunk));// FIXME: redux-thunk
-const reduxStore = createStore(rootReducer, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(rootSaga);
+// const sagaMiddleware = createSagaMiddleware();
+const reduxStore = createStore(rootReducer, applyMiddleware(Thunk));
+// const reduxStore = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+// sagaMiddleware.run(rootSaga);
 
 const App: React.FC = () => {
   return (

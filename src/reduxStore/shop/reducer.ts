@@ -2,7 +2,7 @@ import { createReducer } from 'typesafe-actions';
 import { ShopAction, ShopState } from './types';
 import { GET_PRODUCT_LIST, GET_PRODUCT_LIST_SUCCESS, GET_PRODUCT_LIST_ERROR } from './actions';
 
-const initialState: ShopState = {
+export const initialState: ShopState = {
   product: {
     loading: false,
     error: null,

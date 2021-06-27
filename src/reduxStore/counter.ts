@@ -1,7 +1,7 @@
 // action type
-const INCREMENT = 'counter/INCREMENT' as const;
-const DECREMENT = 'counter/DECREMENT' as const;
-const INCREMENT_BY = 'counter/INCREMENT_BY' as const;
+export const INCREMENT = 'counter/INCREMENT' as const;
+export const DECREMENT = 'counter/DECREMENT' as const;
+export const INCREMENT_BY = 'counter/INCREMENT_BY' as const;
 
 // action
 export const increment = () => ({ type: INCREMENT });
